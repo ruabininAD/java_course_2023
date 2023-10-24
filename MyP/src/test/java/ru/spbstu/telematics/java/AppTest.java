@@ -4,30 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-/**
- * Unit test for simple App.
- */
 
-/*
-public class AppTest 
-    extends TestCase
-{
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    
-    public void testApp()
-    {
-        assertTrue( true );
-    }
-*/
 
 
 
@@ -47,15 +24,15 @@ public class AppTest extends TestCase
 
     public void testMatrixMultiplication()
     {
-        double[][] matrixData1 = {{1, 2, 3}, {4, 5, 6}};
+        double[][] matrixData1 = {{33, 15, 4}, {52, 42, 2}};
         RealMatrix matrix1 = MatrixUtils.createRealMatrix(matrixData1);
 
-        double[][] matrixData2 = {{7, 8}, {9, 10}, {11, 12}};
+        double[][] matrixData2 = {{1, 5}, {3, 2}, {4, 2}};
         RealMatrix matrix2 = MatrixUtils.createRealMatrix(matrixData2);
 
         RealMatrix product = matrix1.multiply(matrix2);
 
-        double[][] expectedData = {{58, 64}, {139, 154}};
+        double[][] expectedData = {{94, 203}, {186, 348}};
         RealMatrix expected = MatrixUtils.createRealMatrix(expectedData);
 
         double epsilon = 1e-9; // Define a small value for comparing floating point numbers
